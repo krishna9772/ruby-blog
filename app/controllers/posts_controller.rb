@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     def create
          # render plain: params[:post].inspect
          @post = Post.new(post_params)
+         @post.user = User.first
 
          if(@post.save)
            flash[:notice] = "Post was created successfully"
