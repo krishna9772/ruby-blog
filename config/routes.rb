@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   get 'about', to: 'pages#about'
-  resources :posts do
+  resources :posts
   get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 
 end
