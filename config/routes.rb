@@ -2,11 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root 'pages#index'
-
-  get 'about' => 'pages#about', as: 'about'
-
+  get 'about', to: 'pages#about'
   resources :posts do
-  	resources :comments
-  end
+  get 'signup', to: 'users#new'
 
 end
