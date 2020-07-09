@@ -14,15 +14,29 @@
           Posts
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if logged_in? %>
          <%= link_to 'Create post', new_post_path, class: 'dropdown-item' %>
+         <% end %>
          <%= link_to 'View all posts', posts_path, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+    <% if logged_in? %>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+      </li>
+    <% else %>
+        <li class="nav-item">
+        <%= link_to 'Log in', login_path, class: "nav-link" %>
+      </li>
+       <li class="nav-item">
+        <%= link_to 'Sign in', signup_path, class: "nav-link" %>
+      </li>
+    <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
