@@ -28,6 +28,7 @@ rails s
 ```
 
 ## Screen-View
+![Alt text](public/screenshots/1.png?raw=true "Title")
 
 
 ## Contributing
