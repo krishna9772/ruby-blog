@@ -28,7 +28,8 @@ rails s
 ```
 
 ## Screen-View
-![Alt text](public/screenshots/1.png?raw=true "Title")
+![Alt text](public/screenshots/one.png?raw=true "Title")![Alt text](public/screenshots/two.png?raw=true "Title")![Alt text](public/screenshots/three.png?raw=true "Title")
+
 
 
 ## Contributing
